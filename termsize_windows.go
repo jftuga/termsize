@@ -66,8 +66,8 @@ func GetConsoleScreenBufferInfo(handle uintptr) (*CONSOLE_SCREEN_BUFFER_INFO, er
 	return &info, nil
 }
 
-func GetTerminalColumns() int {
-	defaultWidth := 80
+func Width() int {
+	defaultWidth := DefaultWidth
 
 	stdoutHandle, err := getStdHandle(syscall.STD_OUTPUT_HANDLE)
 	if err != nil {
@@ -86,8 +86,8 @@ func GetTerminalColumns() int {
 	return defaultWidth
 }
 
-func GetTerminalRows() int {
-	defaultRows := 24
+func Height() int {
+	defaultRows := DefaultHeight
 
 	stdoutHandle, err := getStdHandle(syscall.STD_OUTPUT_HANDLE)
 	if err != nil {

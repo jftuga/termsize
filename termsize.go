@@ -8,18 +8,31 @@ import (
 	"golang.org/x/sys/unix"
 )
 
-func GetTerminalColumns() int {
+var (
+	DefaultWidth  int = 120
+	DefaultHeight int = 24
+)
+
+func SetDefaultWidth(w int) {
+	DefaultWidth = w
+}
+
+func SetDefaultHeight(h int) {
+	DefaultHeight h
+}
+
+func Width() int {
 	ws, err := unix.IoctlGetWinsize(0, unix.TIOCGWINSZ)
 	if err != nil {
-		return 80
+		return DefaultHeight
 	}
 	return int(ws.Col)
 }
 
-func GetTerminalRows() int {
+func Height() int {
 	ws, err := unix.IoctlGetWinsize(0, unix.TIOCGWINSZ)
 	if err != nil {
-		return 80
+		return DefaultHeight
 	}
 	return int(ws.Row)
 }

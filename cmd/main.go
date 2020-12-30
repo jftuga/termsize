@@ -9,7 +9,8 @@ import (
 )
 
 func main() {
-	w := termsize.GetTerminalColumns()
-	h := termsize.GetTerminalRows()
+	termsize.DefaultHeight = 133
+	w := termsize.Width()
+	h := termsize.Height()
 	fmt.Printf("%dx%d\n", w, h)
 }

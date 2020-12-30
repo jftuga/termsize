@@ -4,10 +4,10 @@
 
 package termsize
 
-func GetTerminalColumns() int {
-	return 80
+func Width() int {
+	return DefaultHeight
 }
 
-func GetTerminalRows() int {
-	return 24
+func Height() int {
+	return DefaultHeight
 }
