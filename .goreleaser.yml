@@ -2,6 +2,7 @@ project_name: termsize
 build:
   main: .
   binary: termsize
+  dir: ./cmd
   env:
     - CGO_ENABLED=0
   goos:
