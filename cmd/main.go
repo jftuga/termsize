@@ -18,7 +18,7 @@ var (
 )
 
 func info() {
-	fmt.Printf("terminfo v%s\n", Version)
+	fmt.Printf("termsize v%s\n", Version)
 	fmt.Println("https://github.com/jftuga/termsize")
 	fmt.Println()
 }

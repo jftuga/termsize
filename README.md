@@ -43,5 +43,6 @@ func main() {
 ## Output
 
 ```
-155x46
+PS C:\termsize> .\termsize.exe
+133x46
 ```
