@@ -1,6 +1,8 @@
 # termsize
 Go module to return the terminal width and height
 
+The [Releases Page](https://github.com/jftuga/termsize/releases) contains command-line binaries for Windows, MacOS and Linux.
+
 ## NOTES
 When a terminal is not available such as when using a pipe or redirecting to a file, then the `DefaultWidth` and 
 `DefaultHeight` as defined in `defaults.go` will be used.  These defaults can be changed by setting 
