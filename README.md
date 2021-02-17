@@ -7,6 +7,9 @@ When a terminal is not available such as when using a pipe or redirecting to a f
 `termsize.DefaultWidth` and `termsize.DefaultHeight`.
 
 ## INSTALL
+
+Go version 1.16 or newer is required for compilation.
+
 ```
 go get github.com/jftuga/termsize
 ```
